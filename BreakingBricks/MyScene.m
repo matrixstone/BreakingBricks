@@ -39,14 +39,14 @@ static const uint32_t bottomEdgeCategory = 16;
         notTheBall=contact.bodyA;
     }
     if (notTheBall.categoryBitMask == brickCategory) {
-//        SKAction *playSFX =[SKAction playSoundFileNamed:@"brickhit.caf" waitForCompletion:NO];
-//        [self runAction:playSFX];
+        SKAction *playSFX =[SKAction playSoundFileNamed:@"brickhit.caf" waitForCompletion:NO];
+        [self runAction:playSFX];
         [contact.bodyA.node removeFromParent];
     }
     
     if (notTheBall.categoryBitMask == paddleCategory) {
-//        SKAction *playSFX =[SKAction playSoundFileNamed:@"blip.caf" waitForCompletion:NO];
-//        [self runAction:playSFX];
+        SKAction *playSFX =[SKAction playSoundFileNamed:@"blip.caf" waitForCompletion:NO];
+        [self runAction:playSFX];
     }
     if (notTheBall.categoryBitMask == bottomEdgeCategory) {
         EndScene *end=[EndScene sceneWithSize:self.size];
